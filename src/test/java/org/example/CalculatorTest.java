@@ -34,4 +34,11 @@ class CalculatorTest {
         assertEquals(8,calculator.divide(32,4));
         assertNotEquals(9, calculator.divide(32,4));
     }
+
+    @Test
+    public void testQuadriereZahl() {
+        assertEquals(4, MathUtils.quadriereZahl(2));  // 2^2 = 4
+        assertEquals(9, MathUtils.quadriereZahl(-3)); // (-3)^2 = 9
+        assertEquals(0, MathUtils.quadriereZahl(0));  // 0^2 = 0
+    }
 }
