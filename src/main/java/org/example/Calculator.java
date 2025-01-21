@@ -1,5 +1,6 @@
 package org.example;
 
+import java.io.IOException;
 import java.sql.SQLException;
 
 public class Calculator {
@@ -19,10 +20,9 @@ public class Calculator {
         return a / b;
     }
 
-    public double squareRoot(double a) {
+    public double squareRoot(double a) throws SQLException {
         if (a <= 0) {
-            System.out.println("Square root of a negative number or 0 is undefined in real numbers.");
-            return 0;
+            throw new SQLException("The action cannot be supported!");
         } else {
             return Math.sqrt(a);
         }
