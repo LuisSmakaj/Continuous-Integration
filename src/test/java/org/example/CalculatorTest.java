@@ -37,8 +37,8 @@ class CalculatorTest {
 
     @Test
     public void testQuadriereZahl() {
-        assertEquals(4, MathUtils.quadriereZahl(2));  // 2^2 = 4
-        assertEquals(9, MathUtils.quadriereZahl(-3)); // (-3)^2 = 9
-        assertEquals(0, MathUtils.quadriereZahl(0));  // 0^2 = 0
+        assertEquals(4, calculator.quadriereZahl(2));  // 2^2 = 4
+        assertEquals(9, calculator.quadriereZahl(-3)); // (-3)^2 = 9
+        assertEquals(0, calculator.quadriereZahl(0));  // 0^2 = 0
     }
 }
