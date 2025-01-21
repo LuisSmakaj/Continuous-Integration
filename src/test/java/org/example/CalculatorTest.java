@@ -3,6 +3,8 @@ package org.example;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.sql.SQLException;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class CalculatorTest {
@@ -33,5 +35,11 @@ class CalculatorTest {
     void divide() {
         assertEquals(8,calculator.divide(32,4));
         assertNotEquals(9, calculator.divide(32,4));
+    }
+
+    @Test
+    void squareRoot() throws SQLException {
+        assertEquals(5,calculator.squareRoot(25));
+        assertNotEquals(9, calculator.squareRoot(36));
     }
 }
