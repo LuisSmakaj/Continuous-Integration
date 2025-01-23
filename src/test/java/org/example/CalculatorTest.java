@@ -3,6 +3,8 @@ package org.example;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.sql.SQLException;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class CalculatorTest {
@@ -36,9 +38,14 @@ class CalculatorTest {
     }
 
     @Test
+
     public void testQuadriereZahl() {
         assertEquals(4, calculator.quadriereZahl(2));  // 2^2 = 4
         assertEquals(9, calculator.quadriereZahl(-3)); // (-3)^2 = 9
         assertEquals(0, calculator.quadriereZahl(0));  // 0^2 = 0
+    void squareRoot() throws SQLException {
+        assertEquals(5,calculator.squareRoot(25));
+        assertNotEquals(9, calculator.squareRoot(36));
+
     }
 }
