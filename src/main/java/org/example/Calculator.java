@@ -32,4 +32,12 @@ public class Calculator {
         }
 
     }
+
+    public static double calculateSinus(double angleInRadians) {
+        return Math.sin(angleInRadians);
+    }
+
+    public static double calculateCosinus(double angleInRadians) {
+        return Math.cos(angleInRadians);
+    }
 }
