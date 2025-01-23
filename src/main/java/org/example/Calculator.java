@@ -20,11 +20,16 @@ public class Calculator {
         return a / b;
     }
 
+    public static int quadriereZahl(int x) {
+        return x * x;}
+
+
     public double squareRoot(double a) throws SQLException {
         if (a <= 0) {
             throw new SQLException("The action cannot be supported!");
         } else {
             return Math.sqrt(a);
         }
+
     }
 }
