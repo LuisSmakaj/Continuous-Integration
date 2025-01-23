@@ -43,9 +43,21 @@ class CalculatorTest {
         assertEquals(4, calculator.quadriereZahl(2));  // 2^2 = 4
         assertEquals(9, calculator.quadriereZahl(-3)); // (-3)^2 = 9
         assertEquals(0, calculator.quadriereZahl(0));  // 0^2 = 0
-    void squareRoot() throws SQLException {
-        assertEquals(5,calculator.squareRoot(25));
-        assertNotEquals(9, calculator.squareRoot(36));
 
     }
+        @Test
+        void calculateSinus() {
+            assertEquals(0.0, Calculator.calculateSinus(0), 1E-9); // Erhöhte Toleranz
+            assertEquals(1.0, Calculator.calculateSinus(Math.PI / 2), 1E-9);
+            assertEquals(-1.0, Calculator.calculateSinus(-Math.PI / 2), 1E-9);
+            assertEquals(0.0, Calculator.calculateSinus(Math.PI), 1E-9);
+        }
+
+        @Test
+        void calculateCosinus() {
+            assertEquals(1.0, Calculator.calculateCosinus(0), 1E-9); // Erhöhte Toleranz
+            assertEquals(0.0, Calculator.calculateCosinus(Math.PI / 2), 1E-9);
+            assertEquals(0.0, Calculator.calculateCosinus(-Math.PI / 2), 1E-9);
+            assertEquals(-1.0, Calculator.calculateCosinus(Math.PI), 1E-9);
+        }
 }
